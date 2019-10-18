@@ -61,7 +61,7 @@ if options[:bypass].nil?
 else
 	begin
 	option = options[:bypass]
-	payload = URI ("http://www.crimeflare.us:82/cgi-bin/cfsearch.cgi")
+	payload = URI ("http://www.crimeflare.org:82/cgi-bin/cfsearch.cgi")
 	request = Net::HTTP.post_form(payload, 'cfS' => options[:bypass])
 
 	response =  request.body
@@ -76,7 +76,7 @@ else
 		exit
 	end
 rescue
-	puts "Fatail Erro !"
+	puts "Fatail Error !"
 end
 	ip_real = IPSocket.getaddress (options[:bypass])
 
